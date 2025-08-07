@@ -1,18 +1,52 @@
-import Navbar from "@/components/Navbar";
-
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-gray-100 to-gray-200">
-      <Navbar />
-      <section className="flex flex-col items-center justify-center text-center py-32 px-4">
-        <h1 className="text-5xl font-bold mb-6">Boost your tips with AI automation</h1>
-        <p className="text-lg text-gray-700 max-w-xl mb-8">
-          TipBoost helps content creators automate messages and increase engagement with fans effortlessly.
+    <div>
+      <nav style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        padding: '1rem 2rem',
+        backgroundColor: '#f8f8f8',
+        borderBottom: '1px solid #e5e5e5'
+      }}>
+        <h1 style={{ margin: 0 }}>TipBoost</h1>
+        <ul style={{
+          listStyle: 'none',
+          display: 'flex',
+          gap: '1.5rem',
+          margin: 0,
+          padding: 0
+        }}>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <main style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '4rem 2rem'
+      }}>
+        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
+          Welcome to TipBoost!
+        </h2>
+        <p style={{ fontSize: '1.2rem', maxWidth: '600px', textAlign: 'center', marginBottom: '2rem' }}>
+          Supercharge your fan engagement with smart automated messages, tip rewards, and behavior tracking.
         </p>
-        <button className="px-6 py-3 bg-black text-white rounded-2xl text-lg hover:bg-gray-800 transition">
+        <button style={{
+          backgroundColor: '#0070f3',
+          color: '#fff',
+          border: 'none',
+          padding: '1rem 2rem',
+          fontSize: '1rem',
+          borderRadius: '5px',
+          cursor: 'pointer'
+        }}>
           Get Started
         </button>
-      </section>
+      </main>
     </div>
   );
 }
