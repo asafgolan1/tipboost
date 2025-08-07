@@ -1,53 +1,42 @@
 export default function Home() {
   return (
-    <div>
-      <nav style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        padding: '1rem 2rem',
-        backgroundColor: '#f8f8f8',
-        borderBottom: '1px solid #e5e5e5'
-      }}>
-        <h1 style={{ margin: 0 }}>TipBoost</h1>
-        <ul style={{
-          listStyle: 'none',
-          display: 'flex',
-          gap: '1.5rem',
-          margin: 0,
-          padding: 0
-        }}>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Features</a></li>
-          <li><a href="#">Pricing</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+    <div className="flex flex-col min-h-screen">
+      {/* Header */}
+      <header className="bg-gray-800 text-white p-4">
+        <nav className="container mx-auto flex justify-between items-center">
+          <h1 className="text-xl font-bold">TipBoost</h1>
+          <ul className="flex space-x-4">
+            <li><a href="#home" className="hover:underline">Home</a></li>
+            <li><a href="#features" className="hover:underline">Features</a></li>
+            <li><a href="#contact" className="hover:underline">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
 
-      <main style={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        padding: '4rem 2rem'
-      }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>
-          Welcome to TipBoost!
-        </h2>
-        <p style={{ fontSize: '1.2rem', maxWidth: '600px', textAlign: 'center', marginBottom: '2rem' }}>
-          Supercharge your fan engagement with smart automated messages, tip rewards, and behavior tracking.
+      {/* Main Content */}
+      <main id="home" className="flex-grow container mx-auto p-8 text-center">
+        <h2 className="text-4xl font-bold mb-4">Welcome to TipBoost</h2>
+        <p className="text-lg text-gray-700">
+          A platform that helps content creators boost their tips by automating engagement and personalization.
         </p>
-        <button style={{
-          backgroundColor: '#0070f3',
-          color: '#fff',
-          border: 'none',
-          padding: '1rem 2rem',
-          fontSize: '1rem',
-          borderRadius: '5px',
-          cursor: 'pointer'
-        }}>
-          Get Started
-        </button>
       </main>
+
+      {/* Footer */}
+      <footer id="contact" className="bg-gray-100 text-gray-600 p-6 text-center">
+        <div className="mb-2">
+          Contact us at:{" "}
+          <a href="mailto:support@tipboost.com" className="text-blue-600 hover:underline">
+            support@tipboost.com
+          </a>
+        </div>
+        <div className="space-x-4">
+          <a href="#" className="hover:underline">Privacy Policy</a>
+          <a href="#" className="hover:underline">Terms of Service</a>
+        </div>
+        <p className="mt-2 text-sm">&copy; {new Date().getFullYear()} TipBoost. All rights reserved.</p>
+      </footer>
     </div>
   );
 }
+
 
